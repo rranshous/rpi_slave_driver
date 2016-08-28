@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "$(avahi-resolve-host-name -n raspberrypi.local -6 | cut -f2)%usb0"

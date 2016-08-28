@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+FILENAME=$1
+echo "copying $FILENAME to pi"
+cat $FILENAME | gzip | ssh pi@$(avahi-resolve-host-name -n raspberrypi.local -6 | cut -f2)%usb0 "zcat > $FILENAME"

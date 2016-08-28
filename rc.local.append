@@ -1,0 +1,6 @@
+
+# start mass usb device
+/sbin/modprobe g_multi file=/data/misc.bin,/data/storage.bin nofua=1 nofua=1
+#/sbin/modprobe g_multi file=/data/puppy.iso
+#/sbin/modprobe g_multi file=/data/puppy.iso cdrom=1
+

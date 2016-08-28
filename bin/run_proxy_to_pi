@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "starting http proxy"
+./tinyproxy -d -c ../tinyproxy.conf &
+echo "opening tunnel"
+ssh -R 8888:localhost:8888 pi@$(./pi_ip) 'echo "tunnel open" && sleep 3600'
+

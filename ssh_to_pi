@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-ssh pi@$(avahi-resolve-host-name -n raspberrypi.local -6 | cut -f2)%usb0

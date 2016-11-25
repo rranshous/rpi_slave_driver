@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# add this dir to the path
+BASEDIR=$(dirname "$0")
+PATH="$PATH:$BASEDIR"
+
+ip=$(pi_ip)
+ssh pi@$ip "$@"
